@@ -30,4 +30,5 @@ int main(int argc, char *argv[]) {
 		}
 	}
 	listPrime(max);
+	return 0;
 }
