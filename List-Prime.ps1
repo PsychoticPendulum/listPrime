@@ -1,6 +1,4 @@
-param(
-	[string]$MaxValue
-) 
+param([string]$MaxValue)
 
 if ($MaxValue -eq "") {
 	$MaxValue = Read-Host "Enter Max"
@@ -14,9 +12,7 @@ try {
 }
 
 function Is-Prime {
-	param (
-		[Int32]$n
-	)
+	param ([Int32]$n)
 	
 	for ($i = 2; $i -le [math]::Sqrt($n); $i++) {
 		if ($n % $i -eq 0) {
@@ -27,9 +23,7 @@ function Is-Prime {
 }
 
 function List-Prime {
-	param (
-		[Int32]$max
-	)
+	param ([Int32]$max)
 	
 	for ($i = 2; $i -le $max; $i++) {
 		if (Is-Prime $i -eq $TRUE) {
