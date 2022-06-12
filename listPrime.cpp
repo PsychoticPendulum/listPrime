@@ -1,6 +1,8 @@
 #include <iostream>
 #include <math.h>
 
+// Test
+
 bool isPrime(int n, int *primes) {
 	int index = 0;
 	while (primes[index] != 0 && primes[index] < sqrt(n)) {
