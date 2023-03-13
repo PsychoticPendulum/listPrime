@@ -3,7 +3,19 @@ fn is_prime(n: i64) -> bool {
 }
 
 fn list(max: i64) {
-	for i in 0..max { if is_prime(i) { println!("{}",i); } } 
+	let white	= "\x1b[37m"; 
+	let green	= "\x1b[32m";
+	let red		= "\x1b[31m";
+	for i in 0..max { 
+		let mut col = green;
+		if is_prime(i) {
+			col = green;
+		} else {
+			col = red; 
+		}
+	
+		print!("{}{}{} ",col,i,white);
+	} 	
 }
 
 fn main() {
